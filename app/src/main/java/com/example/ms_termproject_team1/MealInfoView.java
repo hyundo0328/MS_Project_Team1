@@ -1,6 +1,5 @@
 package com.example.ms_termproject_team1;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -9,7 +8,6 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.database.CursorWindow;
 import android.os.Bundle;
-import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
@@ -44,12 +42,13 @@ public class MealInfoView extends AppCompatActivity {
         adapter = new MealListAdapter(MealInfoView.this);
         // 어댑터 등록
         recyclerView.setAdapter(adapter);
+        // Toast.makeText(this, "선택한 식사: " + adapter.getItemCount(), Toast.LENGTH_SHORT).show();
         // 레이아웃 설정
         recyclerView.setLayoutManager(new LinearLayoutManager(MealInfoView.this));
         // DB 생성
         db = new MealCheckDB(MealInfoView.this);
         // 데이터 가져오기
-        storeDataInArray();
+        storeData();
 
         Button btnCalenderView = findViewById(R.id.btnCalenderView);
         btnCalenderView.setOnClickListener(new View.OnClickListener(){
@@ -61,15 +60,14 @@ public class MealInfoView extends AppCompatActivity {
         });
     }
 
-    void storeDataInArray(){
+    void storeData(){
         Cursor cursor = db.readAllData();
 
         if(cursor.getCount() == 0){
             // recyclerView.setVisibility(recyclerView.INVISIBLE);
         } else {
-            recyclerView.setVisibility(recyclerView.VISIBLE);
-
             while(cursor.moveToNext()){
+
                 MealList meal = new MealList(
                         cursor.getString(1),
                         cursor.getString(2),
@@ -84,12 +82,13 @@ public class MealInfoView extends AppCompatActivity {
 
                 // 데이터 등록
                 mealLists.add(meal);
-                System.out.println(mealLists);
                 adapter.addItem(meal);
 
+                Toast.makeText(this, "선택한 식사: " + adapter.getItemCount(), Toast.LENGTH_SHORT).show();
                 // 적용
                 adapter.notifyDataSetChanged();
             }
+
         }
     }
 }

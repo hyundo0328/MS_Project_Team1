@@ -23,7 +23,7 @@
         android:id="@+id/viewText"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="50dp"
         android:background="@drawable/bordered_background"
         android:text="최근 식사 목록"
         android:textAlignment="center"
@@ -43,9 +43,8 @@
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/mealList"
-            android:layout_width="wrap_content"
-            android:layout_height="550dp"
-            android:layout_marginTop="28dp"
-            android:visibility="visible" />
+            android:layout_width="300dp"
+            android:layout_height="500dp" />
     </RelativeLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

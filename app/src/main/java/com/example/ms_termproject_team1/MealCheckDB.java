@@ -67,19 +67,6 @@ public class MealCheckDB extends SQLiteOpenHelper {
         return cursor;
     }
 
-    public Cursor readSelectData(String date){
-        String query = "SELECT * FROM " + TABLE_NAME + " WHERE "+ COLUMN_EATING_DATE + "=?";
-
-        SQLiteDatabase db = this.getReadableDatabase();
-
-        Cursor cursor = null;
-        if(db != null){
-            cursor = db.rawQuery(query, new String[]{date});
-        }
-
-        return cursor;
-    }
-
     public void addMeal(String restaurant, String meal, String date, String start, String time, String kcal,
                         String totalKcal, String price, String point, byte[] meal_image) {
         SQLiteDatabase db = this.getWritableDatabase();

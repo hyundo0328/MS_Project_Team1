@@ -74,13 +74,12 @@ public class MealListAdapter extends RecyclerView.Adapter<MealListAdapter.MyView
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position){
-        MealList meal = mealLists.get(position);
+        MealList meal = mealLists.get(holder.getAdapterPosition());
 
         holder.mealDate.setText(String.valueOf(meal.getMeal_date()));
         holder.mealDate.append(" "+String.valueOf(meal.getMeal_start()));
         holder.mealRestaurant.setText("식사 장소 : "+meal.getRestaurant_name());
         holder.mealMenu.setText("식사 메뉴 : "+meal.getMeal_menu());
-        // holder.mealKcal.setText("칼로리 : "+meal.getMeal_kcal());
         holder.mealTotalKcal.setText("총 칼로리 : "+meal.getMeal_totalKcal()+"kcal");
         holder.mealEating.setText("식사 시간 : "+meal.getMeal_time());
         holder.mealPrice.setText("메뉴 가격 : "+meal.getMeal_price());
@@ -92,7 +91,7 @@ public class MealListAdapter extends RecyclerView.Adapter<MealListAdapter.MyView
 
         // holder.setItem(meal); // 화면에 데이터 담기
 
-        holder.cardView.setOnClickListener(new View.OnClickListener(){
+        holder.mainLayout.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
                 int mPosition = holder.getAdapterPosition();
@@ -133,11 +132,4 @@ public class MealListAdapter extends RecyclerView.Adapter<MealListAdapter.MyView
     public void removeItem(int position){
         mealLists.remove(position);
     }
-
-    // OnItemClickListener 인터페이스 선언
-    public interface OnItemClickListener {
-    }
-
-    // OnItemClickListener 참조 변수 선언
-    private OnItemClickListener itemClickListener;
 }

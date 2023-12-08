@@ -65,6 +65,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="80dp"
         android:background="@drawable/bordered_background"
+        android:padding="10dp"
         android:textAlignment="center"
         android:textSize="24sp"
         android:textStyle="bold"
