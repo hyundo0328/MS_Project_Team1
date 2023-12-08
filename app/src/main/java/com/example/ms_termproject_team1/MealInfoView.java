@@ -49,6 +49,8 @@ public class MealInfoView extends AppCompatActivity {
         db = new MealCheckDB(MealInfoView.this);
         // 데이터 가져오기
         storeDataInArray();
+
+
     }
 
     void storeDataInArray(){
