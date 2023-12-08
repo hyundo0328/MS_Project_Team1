@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background_view4"
     tools:context=".MealInfoInputFourth">
 
     <Button
@@ -14,6 +15,7 @@
         android:layout_marginBottom="60dp"
         android:text="&lt;"
         android:textAlignment="center"
+        android:textColor="@color/white"
         android:textSize="20sp"
         app:cornerRadius="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -27,6 +29,7 @@
         android:layout_marginBottom="60dp"
         android:text="&gt;"
         android:textAlignment="center"
+        android:textColor="@color/white"
         android:textSize="20sp"
         app:cornerRadius="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -50,8 +53,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="60dp"
+        android:background="#B03F51B5"
+        android:paddingLeft="15dp"
+        android:paddingTop="5dp"
+        android:paddingRight="15dp"
+        android:paddingBottom="5dp"
         android:text="음식 만족도는?"
         android:textAlignment="center"
+        android:textColor="@color/white"
         android:textSize="28sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -63,7 +72,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:textSize="20sp"
+        android:textColor="@color/white"
+        android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -96,11 +106,13 @@
             android:layout_height="wrap_content"
             android:padding="3dp">
 
-            <Button
+            <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/point1"
                 android:layout_width="72dp"
                 android:layout_height="65dp"
+                android:background="@drawable/btn_color"
                 android:text="1점"
+                android:textColor="@color/white"
                 app:cornerRadius="8dp" />
         </FrameLayout>
 
@@ -110,11 +122,13 @@
             android:padding="3dp"
             android:paddingLeft="2dp">
 
-            <Button
+            <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/point2"
                 android:layout_width="72dp"
                 android:layout_height="65dp"
+                android:background="@drawable/btn_color"
                 android:text="2점"
+                android:textColor="@color/white"
                 app:cornerRadius="8dp" />
         </FrameLayout>
 
@@ -124,11 +138,13 @@
             android:padding="3dp"
             android:paddingLeft="2dp">
 
-            <Button
+            <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/point3"
                 android:layout_width="72dp"
                 android:layout_height="65dp"
+                android:background="@drawable/btn_color"
                 android:text="3점"
+                android:textColor="@color/white"
                 app:cornerRadius="8dp" />
         </FrameLayout>
 
@@ -138,11 +154,13 @@
             android:padding="3dp"
             android:paddingLeft="2dp">
 
-            <Button
+            <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/point4"
                 android:layout_width="72dp"
                 android:layout_height="65dp"
+                android:background="@drawable/btn_color"
                 android:text="4점"
+                android:textColor="@color/white"
                 app:cornerRadius="8dp" />
         </FrameLayout>
 
@@ -152,11 +170,13 @@
             android:padding="3dp"
             android:paddingLeft="2dp">
 
-            <Button
+            <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/point5"
                 android:layout_width="72dp"
                 android:layout_height="65dp"
+                android:background="@drawable/btn_color"
                 android:text="5점"
+                android:textColor="@color/white"
                 app:cornerRadius="8dp" />
         </FrameLayout>
 

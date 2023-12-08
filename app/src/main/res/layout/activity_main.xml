@@ -4,54 +4,65 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background2"
     tools:context=".MainActivity">
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_view_move"
-        android:layout_width="250dp"
-        android:layout_height="70dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginBottom="40dp"
+        android:layout_width="240dp"
+        android:layout_height="80dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="25dp"
+        android:background="@drawable/btn_yellow"
+        android:elevation="10dp"
+        android:shadowColor="#FFFFFF"
         android:text="@string/meal_view"
         android:textAlignment="center"
+        android:textColor="@color/white"
         android:textSize="24sp"
         android:textStyle="bold"
         app:cornerRadius="8dp"
         app:layout_constraintBottom_toTopOf="@+id/btn_analysis_move"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_input_move" />
+        app:layout_constraintStart_toStartOf="parent" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_analysis_move"
-        android:layout_width="250dp"
-        android:layout_height="70dp"
-        android:layout_marginTop="40dp"
+        android:layout_width="240dp"
+        android:layout_height="80dp"
+        android:layout_marginEnd="8dp"
         android:layout_marginBottom="80dp"
+        android:background="@drawable/btn_blue"
+        android:elevation="10dp"
+        android:shadowColor="#FFFFFF"
         android:text="@string/meal_analysis"
         android:textAlignment="center"
+        android:textColor="@color/white"
         android:textSize="24sp"
         android:textStyle="bold"
         app:cornerRadius="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_view_move" />
+        app:layout_constraintStart_toStartOf="parent" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_input_move"
-        android:layout_width="250dp"
-        android:layout_height="70dp"
-        android:layout_marginTop="80dp"
-        android:layout_marginBottom="40dp"
+        android:layout_width="240dp"
+        android:layout_height="80dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="25dp"
+        android:background="@drawable/btn_red"
+        android:elevation="10dp"
+        android:shadowColor="#FFFFFF"
         android:text="@string/meal_input"
         android:textAlignment="center"
+        android:textColor="@color/white"
         android:textSize="24sp"
         android:textStyle="bold"
         app:cornerRadius="8dp"
         app:layout_constraintBottom_toTopOf="@+id/btn_view_move"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background_view5"
     tools:context=".MealInfoViewDetail">
 
     <TextView
@@ -11,8 +12,13 @@
         android:layout_width="320dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="60dp"
-        android:background="@drawable/bordered_background"
+        android:background="@drawable/textview_color"
+        android:paddingLeft="15dp"
+        android:paddingTop="5dp"
+        android:paddingRight="15dp"
+        android:paddingBottom="5dp"
         android:textAlignment="center"
+        android:textColor="@color/white"
         android:textSize="28sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -29,24 +35,17 @@
         app:layout_constraintTop_toBottomOf="@+id/detailDate"
         tools:srcCompat="@tools:sample/avatars" />
 
-    <LinearLayout
-        android:id="@+id/linearLayout2"
+    <TextView
+        android:id="@+id/detailList"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:orientation="vertical"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/detailImage">
-
-        <TextView
-            android:id="@+id/detailList"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="20sp"
-            android:textStyle="bold" />
-
-    </LinearLayout>
+        app:layout_constraintTop_toBottomOf="@+id/detailImage" />
 
     <Button
         android:id="@+id/btnKcalView"
@@ -54,6 +53,7 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="70dp"
         android:layout_marginBottom="50dp"
+        android:background="@drawable/btn_color"
         android:text="식사 열량\n보기"
         android:textSize="16sp"
         android:textStyle="bold"
@@ -67,6 +67,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="70dp"
         android:layout_marginBottom="50dp"
+        android:background="@drawable/btn_color"
         android:text="식사 정보\n보기"
         android:textSize="16sp"
         android:textStyle="bold"

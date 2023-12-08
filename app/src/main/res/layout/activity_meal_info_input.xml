@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background_view4"
     tools:context=".MealInfoInput">
 
     <TextView
@@ -13,6 +14,7 @@
         android:layout_marginBottom="78dp"
         android:text="1 / 6"
         android:textAlignment="center"
+        android:textColor="@color/black"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -24,8 +26,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="60dp"
+        android:background="#B03F51B5"
+        android:paddingLeft="15dp"
+        android:paddingTop="5dp"
+        android:paddingRight="15dp"
+        android:paddingBottom="5dp"
         android:text="식사 장소를 입력하세요"
         android:textAlignment="center"
+        android:textColor="#FFFFFF"
         android:textSize="28sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -52,32 +60,38 @@
         android:layout_height="60dp"
         android:layout_marginEnd="95dp"
         android:layout_marginBottom="60dp"
+        android:background="@drawable/btn_color"
         android:text="&gt;"
         android:textAlignment="center"
+        android:textColor="@color/white"
         android:textSize="20sp"
         app:cornerRadius="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button6"
         android:layout_width="100dp"
         android:layout_height="75dp"
         android:layout_marginTop="25dp"
         android:layout_marginEnd="30dp"
+        android:background="@drawable/btn_color"
         android:text="@string/restaurant_sangrok3"
+        android:textColor="@color/white"
         android:textSize="16sp"
         android:textStyle="bold"
         app:cornerRadius="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button3" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button5"
         android:layout_width="100dp"
         android:layout_height="75dp"
         android:layout_marginTop="25dp"
+        android:background="@drawable/btn_color"
         android:text="@string/restaurant_sangrok2"
+        android:textColor="@color/white"
         android:textSize="16sp"
         android:textStyle="bold"
         app:cornerRadius="10dp"
@@ -85,38 +99,45 @@
         app:layout_constraintStart_toEndOf="@+id/button4"
         app:layout_constraintTop_toBottomOf="@+id/button2" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button1"
         android:layout_width="100dp"
         android:layout_height="75dp"
         android:layout_marginStart="30dp"
         android:layout_marginTop="10dp"
+        android:background="@drawable/btn_color"
         android:text="@string/restaurant_hangangro"
+        android:textColor="@color/white"
         android:textSize="16sp"
         android:textStyle="bold"
         app:cornerRadius="10dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/restaurant" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button4"
         android:layout_width="100dp"
         android:layout_height="75dp"
         android:layout_marginStart="30dp"
         android:layout_marginTop="25dp"
+        android:background="@drawable/btn_color"
         android:text="@string/restaurant_sangrok1"
+        android:textColor="@color/white"
         android:textSize="16sp"
         android:textStyle="bold"
         app:cornerRadius="10dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button1" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button2"
         android:layout_width="100dp"
         android:layout_height="75dp"
         android:layout_marginTop="10dp"
+        android:background="@drawable/btn_color"
+        android:foregroundTintMode="add"
         android:text="@string/restaurant_dongas"
+        android:textColor="@color/white"
         android:textSize="16sp"
         android:textStyle="bold"
         app:cornerRadius="10dp"
@@ -124,26 +145,30 @@
         app:layout_constraintStart_toEndOf="@+id/button1"
         app:layout_constraintTop_toBottomOf="@+id/restaurant" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button3"
         android:layout_width="100dp"
         android:layout_height="75dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="30dp"
+        android:background="@drawable/btn_color"
         android:text="@string/restaurant_onudge"
+        android:textColor="@color/white"
         android:textSize="16sp"
         android:textStyle="bold"
         app:cornerRadius="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/restaurant" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button9"
         android:layout_width="100dp"
         android:layout_height="75dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="30dp"
+        android:background="@drawable/btn_color"
         android:text="@string/cafe_stump"
+        android:textColor="@color/white"
         android:textSize="16sp"
         android:textStyle="bold"
         app:cornerRadius="10dp"
@@ -152,13 +177,15 @@
         app:layout_constraintTop_toBottomOf="@+id/cafe"
         app:layout_constraintVertical_bias="0.0" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button7"
         android:layout_width="100dp"
         android:layout_height="75dp"
         android:layout_marginStart="30dp"
         android:layout_marginTop="10dp"
+        android:background="@drawable/btn_color"
         android:text="@string/cafe_paul"
+        android:textColor="@color/white"
         android:textSize="16sp"
         android:textStyle="bold"
         app:cornerRadius="10dp"
@@ -167,12 +194,14 @@
         app:layout_constraintTop_toBottomOf="@+id/cafe"
         app:layout_constraintVertical_bias="0.0" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button8"
         android:layout_width="100dp"
         android:layout_height="75dp"
         android:layout_marginTop="10dp"
+        android:background="@drawable/btn_color"
         android:text="@string/cafe_blue"
+        android:textColor="@color/white"
         android:textSize="16sp"
         android:textStyle="bold"
         app:cornerRadius="10dp"
@@ -186,6 +215,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
         android:text="카페"
+        android:textColor="@color/white"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -210,6 +240,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
         android:text="음식점"
+        android:textColor="@color/white"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"

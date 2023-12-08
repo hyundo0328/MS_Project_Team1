@@ -4,10 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background_view"
     tools:context=".MealInfoView2">
 
     <RelativeLayout
-        android:layout_width="wrap_content"
+        android:layout_width="350dp"
         android:layout_height="500dp"
         android:layout_marginTop="40dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -16,30 +17,35 @@
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/mealList2"
-            android:layout_width="300dp"
+            android:layout_width="350dp"
             android:layout_height="500dp" />
     </RelativeLayout>
 
-    <TextView
+    <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/viewText2"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
-        android:background="@drawable/bordered_background"
+        android:background="#B03F51B5"
         android:text="최근 식사 목록"
         android:textAlignment="center"
+        android:textColor="@color/white"
         android:textSize="28sp"
         android:textStyle="bold"
+        app:cornerRadius="8dp"
+        app:layout_constraintCircleRadius="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnCalenderView2"
         android:layout_width="300dp"
         android:layout_height="60dp"
         android:layout_marginBottom="30dp"
+        android:background="#3F51B5"
         android:text="이 달 의  식 사"
+        android:textColor="@color/white"
         android:textSize="28sp"
         android:textStyle="bold"
         app:cornerRadius="8dp"

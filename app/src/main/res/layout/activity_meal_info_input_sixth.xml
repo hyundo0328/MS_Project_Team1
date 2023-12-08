@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background_view4"
     tools:context=".MealInfoInputSixth">
 
     <Button
@@ -24,8 +25,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="60dp"
+        android:background="#B03F51B5"
+        android:paddingLeft="15dp"
+        android:paddingTop="5dp"
+        android:paddingRight="15dp"
+        android:paddingBottom="5dp"
         android:text="메뉴 가격을 적어주세요"
         android:textAlignment="center"
+        android:textColor="@color/white"
         android:textSize="28sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -64,7 +71,7 @@
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="80dp"
-        android:background="@drawable/bordered_background"
+        android:background="#80FFFFFF"
         android:padding="10dp"
         android:textAlignment="center"
         android:textSize="24sp"
@@ -73,50 +80,62 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/mainText6" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/tenThousand"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
         android:layout_marginTop="40dp"
+        android:background="@drawable/btn_color"
         android:text="@string/tenThousand"
+        android:textColor="@color/white"
         android:textSize="14sp"
         app:cornerRadius="8dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/priceText" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/thousand"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
         android:layout_marginTop="40dp"
         android:layout_marginEnd="5dp"
+        android:background="@drawable/btn_color"
         android:text="@string/thousand"
+        android:textColor="@color/white"
         android:textSize="14sp"
         app:cornerRadius="8dp"
         app:layout_constraintEnd_toStartOf="@+id/hundred"
         app:layout_constraintStart_toEndOf="@+id/tenThousand"
         app:layout_constraintTop_toBottomOf="@+id/priceText" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/hundred"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
         android:layout_marginEnd="30dp"
+        android:background="@drawable/btn_color"
         android:text="@string/hundred"
+        android:textColor="@color/white"
         android:textSize="14sp"
         app:cornerRadius="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/priceText" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnComplete"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="70dp"
+        android:background="@drawable/btn_color"
+        android:paddingLeft="15dp"
+        android:paddingTop="5dp"
+        android:paddingRight="15dp"
+        android:paddingBottom="5dp"
         android:text="@string/complete"
+        android:textColor="@color/white"
         android:textSize="20sp"
         android:textStyle="bold"
         app:cornerRadius="8dp"
@@ -129,43 +148,50 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
+        android:textColor="@color/white"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnComplete" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/mtenThousand"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
         android:layout_marginTop="15dp"
+        android:background="@drawable/btn_color"
         android:text="@string/mtenThousand"
+        android:textColor="@color/white"
         android:textSize="14sp"
         app:cornerRadius="8dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tenThousand" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/mthousand"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
+        android:background="@drawable/btn_color"
         android:text="@string/mthousand"
+        android:textColor="@color/white"
         android:textSize="14sp"
         app:cornerRadius="8dp"
         app:layout_constraintEnd_toStartOf="@+id/mhundred"
         app:layout_constraintStart_toEndOf="@+id/mtenThousand"
         app:layout_constraintTop_toBottomOf="@+id/thousand" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/mhundred"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
         android:layout_marginEnd="30dp"
+        android:background="@drawable/btn_color"
         android:text="@string/mhundred"
+        android:textColor="@color/white"
         android:textSize="14sp"
         app:cornerRadius="8dp"
         app:layout_constraintEnd_toEndOf="parent"

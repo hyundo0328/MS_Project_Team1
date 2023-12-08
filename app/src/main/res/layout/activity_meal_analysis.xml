@@ -4,30 +4,38 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background_view3"
     tools:context=".MealAnalysis">
 
     <TextView
         android:id="@+id/analysisText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
+        android:layout_marginBottom="20dp"
+        android:background="#8066CC33"
+        android:paddingLeft="15dp"
+        android:paddingTop="10dp"
+        android:paddingRight="15dp"
+        android:paddingBottom="10dp"
         android:text="최근 1개월간 식사 분석"
-        android:textSize="34sp"
+        android:textColor="@color/white"
+        android:textSize="30sp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout3"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <LinearLayout
+        android:id="@+id/linearLayout3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="150dp"
-        android:background="@drawable/bordered_background"
+        android:layout_marginBottom="150dp"
+        android:background="#C0FFFFFF"
         android:orientation="vertical"
         android:padding="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/analysisText">
+        app:layout_constraintStart_toStartOf="parent">
 
         <TextView
             android:id="@+id/monthKcal"
