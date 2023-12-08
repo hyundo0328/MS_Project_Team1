@@ -11,6 +11,7 @@ import android.database.CursorWindow;
 import android.os.Bundle;
 import android.view.MotionEvent;
 import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 import java.lang.reflect.Field;
@@ -50,7 +51,14 @@ public class MealInfoView extends AppCompatActivity {
         // 데이터 가져오기
         storeDataInArray();
 
-
+        Button btnCalenderView = findViewById(R.id.btnCalenderView);
+        btnCalenderView.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MealInfoView.this, MealInfoViewMonth.class);
+                startActivity(intent);
+            }
+        });
     }
 
     void storeDataInArray(){

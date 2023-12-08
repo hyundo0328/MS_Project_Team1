@@ -7,6 +7,8 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.widget.Toast;
 
+import java.util.ArrayList;
+
 public class MealCheckDB extends SQLiteOpenHelper {
     private Context context;
     public static final String DATABASE_NAME = "mealInfoDetail.db";
@@ -60,6 +62,19 @@ public class MealCheckDB extends SQLiteOpenHelper {
         Cursor cursor = null;
         if(db != null){
             cursor = db.rawQuery(query, null);
+        }
+
+        return cursor;
+    }
+
+    public Cursor readSelectData(String date){
+        String query = "SELECT * FROM " + TABLE_NAME + " WHERE "+ COLUMN_EATING_DATE + "=?";
+
+        SQLiteDatabase db = this.getReadableDatabase();
+
+        Cursor cursor = null;
+        if(db != null){
+            cursor = db.rawQuery(query, new String[]{date});
         }
 
         return cursor;
