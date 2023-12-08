@@ -15,18 +15,17 @@ import android.widget.Toast;
 import java.lang.reflect.Field;
 import java.util.ArrayList;
 
-public class MealInfoView extends AppCompatActivity {
+public class MealInfoView2 extends AppCompatActivity {
 
     MealCheckDB db;
     ArrayList<MealList> mealLists = new ArrayList<>();
-    RecyclerView recyclerView;
-    MealListAdapter adapter;
+    RecyclerView recyclerView2;
+    MealListAdapter adapter2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_meal_info_view);
-
+        setContentView(R.layout.activity_meal_info_view2);
         // 이미지 크기 오류 방지
         try{
             Field field = CursorWindow.class.getDeclaredField("sCursorWindowSize");
@@ -37,24 +36,24 @@ public class MealInfoView extends AppCompatActivity {
         }
 
         // 리스트에 보여줄 화면
-        recyclerView = findViewById(R.id.mealList2);
+        recyclerView2 = findViewById(R.id.mealList2);
         // 어댑터
-        adapter = new MealListAdapter(MealInfoView.this);
+        adapter2 = new MealListAdapter(MealInfoView2.this);
         // 어댑터 등록
-        recyclerView.setAdapter(adapter);
+        recyclerView2.setAdapter(adapter2);
         // Toast.makeText(this, "선택한 식사: " + adapter.getItemCount(), Toast.LENGTH_SHORT).show();
         // 레이아웃 설정
-        recyclerView.setLayoutManager(new LinearLayoutManager(MealInfoView.this));
+        recyclerView2.setLayoutManager(new LinearLayoutManager(MealInfoView2.this));
         // DB 생성
-        db = new MealCheckDB(MealInfoView.this);
+        db = new MealCheckDB(MealInfoView2.this);
         // 데이터 가져오기
         storeData();
 
-        Button btnCalenderView = findViewById(R.id.btnCalenderView);
+        Button btnCalenderView = findViewById(R.id.btnCalenderView2);
         btnCalenderView.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MealInfoView.this, MealInfoViewMonth.class);
+                Intent intent = new Intent(MealInfoView2.this, MealInfoViewMonth.class);
                 startActivity(intent);
             }
         });
@@ -82,11 +81,11 @@ public class MealInfoView extends AppCompatActivity {
 
                 // 데이터 등록
                 mealLists.add(meal);
-                adapter.addItem(meal);
+                adapter2.addItem(meal);
 
-                Toast.makeText(this, "선택한 식사: " + adapter.getItemCount(), Toast.LENGTH_SHORT).show();
+                // Toast.makeText(this, "선택한 식사: " + adapter2.getItemCount(), Toast.LENGTH_SHORT).show();
                 // 적용
-                adapter.notifyDataSetChanged();
+                adapter2.notifyDataSetChanged();
             }
 
         }

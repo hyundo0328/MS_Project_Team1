@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // 버튼 클릭 시 다른 액티비티로 이동
-                Intent intent = new Intent(MainActivity.this, MealInfoView.class);
+                Intent intent = new Intent(MainActivity.this, MealInfoView2.class);
                 startActivity(intent);
             }
         });

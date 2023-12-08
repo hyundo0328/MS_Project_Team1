@@ -110,12 +110,12 @@ public class MealInfoViewDetail extends AppCompatActivity {
         int hour = calendar.get(Calendar.HOUR_OF_DAY);
 
         // 여기에서 조식, 중식, 석식을 나누는 규칙을 정의할 수 있습니다.
-        if (hour < 11) {
-            return "조식";
-        } else if (hour < 17) {
-            return "중식";
+        if (hour <= 11) {
+            return "아침";
+        } else if (hour <= 17) {
+            return "점심";
         } else {
-            return "석식";
+            return "저녁";
         }
     }
 

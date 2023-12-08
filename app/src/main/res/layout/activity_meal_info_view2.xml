@@ -4,23 +4,24 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MealInfoView">
+    tools:context=".MealInfoView2">
 
-    <Button
-        android:id="@+id/btnCalenderView"
-        android:layout_width="300dp"
-        android:layout_height="60dp"
-        android:layout_marginBottom="30dp"
-        android:text="이 달 의  식 사"
-        android:textSize="28sp"
-        android:textStyle="bold"
-        app:cornerRadius="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="500dp"
+        android:layout_marginTop="40dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewText2">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/mealList2"
+            android:layout_width="300dp"
+            android:layout_height="500dp" />
+    </RelativeLayout>
 
     <TextView
-        android:id="@+id/viewText"
+        android:id="@+id/viewText2"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
@@ -33,18 +34,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_height="500dp"
-        android:layout_marginTop="50dp"
+    <Button
+        android:id="@+id/btnCalenderView2"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="30dp"
+        android:text="이 달 의  식 사"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:cornerRadius="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/viewText">
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/mealList2"
-            android:layout_width="300dp"
-            android:layout_height="500dp" />
-    </RelativeLayout>
-
+        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

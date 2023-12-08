@@ -36,10 +36,6 @@ public class MealAnalysis extends AppCompatActivity {
 
         // 현재 날짜로부터 한 달 전의 날짜로 설정
         calendar.add(Calendar.MONTH, -1);
-        monthTotalKcal = 0;
-        monthBreakfastPrice = 0;
-        monthLunchPrice = 0;
-        monthDinnerPrice = 0;
 
         monthKcal.setText("총 : ");
         monthBreakfast.setText("아침 : ");
@@ -60,45 +56,56 @@ public class MealAnalysis extends AppCompatActivity {
     void storeDataInArray() throws ParseException {
         Cursor cursor = db.readAllData();
 
-        String restaurant = "";
-        String date = "";
-        String start = "";
-        String totalKcal = "";
-        String price = "";
+//        String restaurant = "";
+//        String date = "";
+//        String start = "";
+//        String totalKcal = "";
+//        String price = "";
 
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy년 MM월 dd일");
         if(cursor.getCount() == 0){
 
         } else {
             while(cursor.moveToNext()){
-                restaurant = cursor.getString(1);
-                date = cursor.getString(3);
-                start = cursor.getString(4);
-                totalKcal = cursor.getString(7);
-                price = cursor.getString(8);
+                String restaurant = cursor.getString(1);
+                String date = cursor.getString(3);
+                String start = cursor.getString(4);
+                String totalKcal = cursor.getString(7);
+                String price = cursor.getString(8);
 
                 Date inputDate = dateFormat.parse(date);
                 // 현재로부터 한 달 전의 날짜와 입력된 날짜를 비교
                 if (inputDate.after(calendar.getTime())) {
                     monthTotalKcal += Integer.parseInt(totalKcal);
+
                     if(restaurant.equals("폴 바셋") || restaurant.equals("블루팟") || restaurant.equals("그루터기")){
                         monthWaterPrice += Integer.parseInt(price);
                     } else {
-                        String mealType = "";
                         // 식사 시간 아침, 점심, 저녁 구분
                         try {
-                            Date dateNew = parseTime(start);
+                            String timeString = "12:00";
 
-                            mealType = getMealType(dateNew);
+                            // SimpleDateFormat을 사용하여 문자열을 Date 객체로 파싱
+                            SimpleDateFormat sdf = new SimpleDateFormat("HH:mm");
+                            Date dateNew = sdf.parse(timeString);
+
+                            // Calendar 객체를 생성하고 파싱된 Date 객체를 설정
+                            Calendar calendar = Calendar.getInstance();
+                            calendar.setTime(dateNew);
+
+                            // 시간 추출
+                            int hour = calendar.get(Calendar.HOUR_OF_DAY);
+
+                            // 아침, 점심, 저녁 구분
+                            if (hour < 11) {
+                                monthBreakfastPrice += Integer.parseInt(price);
+                            } else if (hour < 17) {
+                                monthLunchPrice += Integer.parseInt(price);
+                            } else {
+                                monthDinnerPrice += Integer.parseInt(price);
+                            }
                         } catch (ParseException e) {
                             e.printStackTrace();
-                        }
-                        if(mealType.equals("아침")){
-                            monthBreakfastPrice += Integer.parseInt(price);
-                        } else if(mealType.equals("중식")){
-                            monthLunchPrice += Integer.parseInt(price);
-                        } else if(mealType.equals("저녁")){
-                            monthDinnerPrice += Integer.parseInt(price);
                         }
                     }
                 }
@@ -119,9 +126,9 @@ public class MealAnalysis extends AppCompatActivity {
         int hour = calendar.get(Calendar.HOUR_OF_DAY);
 
         // 여기에서 조식, 중식, 석식을 나누는 규칙을 정의할 수 있습니다.
-        if (hour < 11) {
+        if (hour <= 11) {
             return "아침";
-        } else if (hour < 17) {
+        } else if (hour <= 17) {
             return "점심";
         } else {
             return "저녁";

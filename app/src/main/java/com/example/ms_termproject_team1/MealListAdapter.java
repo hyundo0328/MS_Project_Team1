@@ -82,7 +82,7 @@ public class MealListAdapter extends RecyclerView.Adapter<MealListAdapter.MyView
         holder.mealMenu.setText("식사 메뉴 : "+meal.getMeal_menu());
         holder.mealTotalKcal.setText("총 칼로리 : "+meal.getMeal_totalKcal()+"kcal");
         holder.mealEating.setText("식사 시간 : "+meal.getMeal_time());
-        holder.mealPrice.setText("메뉴 가격 : "+meal.getMeal_price());
+        holder.mealPrice.setText("메뉴 가격 : "+meal.getMeal_price()+"원");
         holder.mealPoint.setText("평점 : "+meal.getMeal_point());
 
         byte[] image = meal.getMenu_image();
@@ -111,7 +111,7 @@ public class MealListAdapter extends RecyclerView.Adapter<MealListAdapter.MyView
                 intent.putExtra("point", mealLists.get(mPosition).getMeal_point());
                 intent.putExtra("image", mealLists.get(mPosition).getMenu_image());
 
-                ((MealInfoView)context).startActivity(intent);
+                ((MealInfoView2)context).startActivity(intent);
             }
         });
     }
