@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MealInfoInput">
+
+    <TextView
+        android:id="@+id/pageText1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="78dp"
+        android:text="1 / 6"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/next2"
+        app:layout_constraintStart_toEndOf="@+id/prev" />
+
+    <TextView
+        android:id="@+id/mainText1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:text="식사 장소를 입력하세요"
+        android:textAlignment="center"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/prev"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="95dp"
+        android:layout_marginBottom="60dp"
+        android:text="&lt;"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:visibility="invisible"
+        app:cornerRadius="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/next2"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="95dp"
+        android:layout_marginBottom="60dp"
+        android:text="&gt;"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:cornerRadius="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/button6"
+        android:layout_width="100dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="30dp"
+        android:text="@string/restaurant_sangrok3"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:cornerRadius="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button3" />
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="100dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="25dp"
+        android:text="@string/restaurant_sangrok2"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:cornerRadius="10dp"
+        app:layout_constraintEnd_toStartOf="@+id/button6"
+        app:layout_constraintStart_toEndOf="@+id/button4"
+        app:layout_constraintTop_toBottomOf="@+id/button2" />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="100dp"
+        android:layout_height="75dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/restaurant_hangangro"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:cornerRadius="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/restaurant" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="100dp"
+        android:layout_height="75dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="25dp"
+        android:text="@string/restaurant_sangrok1"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:cornerRadius="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button1" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="100dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/restaurant_dongas"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:cornerRadius="10dp"
+        app:layout_constraintEnd_toStartOf="@+id/button3"
+        app:layout_constraintStart_toEndOf="@+id/button1"
+        app:layout_constraintTop_toBottomOf="@+id/restaurant" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="100dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="30dp"
+        android:text="@string/restaurant_onudge"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:cornerRadius="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/restaurant" />
+
+    <Button
+        android:id="@+id/button9"
+        android:layout_width="100dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="30dp"
+        android:text="@string/cafe_stump"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:cornerRadius="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cafe"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/button7"
+        android:layout_width="100dp"
+        android:layout_height="75dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/cafe_paul"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:cornerRadius="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cafe"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/button8"
+        android:layout_width="100dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/cafe_blue"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:cornerRadius="10dp"
+        app:layout_constraintEnd_toStartOf="@+id/button9"
+        app:layout_constraintStart_toEndOf="@+id/button7"
+        app:layout_constraintTop_toBottomOf="@+id/cafe" />
+
+    <TextView
+        android:id="@+id/cafe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="카페"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button5" />
+
+    <TextView
+        android:id="@+id/restaurant_text"
+        android:layout_width="300dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="50dp"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button8" />
+
+    <TextView
+        android:id="@+id/restaurant"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="음식점"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mainText1" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

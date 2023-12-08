@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MealInfoInputFifth">
+
+    <Button
+        android:id="@+id/prev4"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="95dp"
+        android:layout_marginBottom="60dp"
+        android:text="&lt;"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:cornerRadius="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/pageText5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="78dp"
+        android:text="5 / 6"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/next6"
+        app:layout_constraintStart_toEndOf="@+id/prev4" />
+
+    <Button
+        android:id="@+id/next6"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="95dp"
+        android:layout_marginBottom="60dp"
+        android:text="&gt;"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:cornerRadius="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/mainText5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:text="식사시간을 입력해주세요"
+        android:textAlignment="center"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/eatingStart"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="5dp"
+        android:background="@drawable/bordered_background"
+        android:clickable="true"
+        android:onClick="showTimePickerDialog"
+        android:text="식사 시작시간 선택"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/startSave"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/eatingDate" />
+
+    <TextView
+        android:id="@+id/eatingDate"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="91dp"
+        android:layout_marginEnd="5dp"
+        android:background="@drawable/bordered_background"
+        android:clickable="true"
+        android:onClick="showDatePickerDialog"
+        android:text="식사 날짜 선택"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/startSave"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mainText5" />
+
+    <TextView
+        android:id="@+id/eatingEnd"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="5dp"
+        android:background="@drawable/bordered_background"
+        android:clickable="true"
+        android:onClick="showTimePickerDialog"
+        android:text="식사 종료시간 선택"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/endSave"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/eatingStart" />
+
+    <Button
+        android:id="@+id/startSave"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="60dp"
+        android:onClick="onSaveButtonClick"
+        android:text="@string/menu_save"
+        app:cornerRadius="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dateSave" />
+
+    <Button
+        android:id="@+id/dateSave"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="60dp"
+        android:onClick="onSaveButtonClick"
+        android:text="@string/menu_save"
+        app:cornerRadius="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mainText5" />
+
+    <Button
+        android:id="@+id/endSave"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="60dp"
+        android:onClick="onSaveButtonClick"
+        android:text="@string/menu_save"
+        app:cornerRadius="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/startSave" />
+
+    <TextView
+        android:id="@+id/totaltimeText"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:layout_marginTop="70dp"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/eatingEnd" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

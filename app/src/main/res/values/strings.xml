@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">MS_TermProject_Team1</string>
+    <string name="meal_input">식사 정보 입력하기</string>
+    <string name="meal_view">입력한 식사 보기</string>
+    <string name="meal_analysis">식사 분석하기</string>
+    <string name="restaurant_onudge">오넛지</string>
+    <string name="restaurant_sangrok1">상록원 1층</string>
+    <string name="restaurant_sangrok2">상록원 2층</string>
+    <string name="restaurant_sangrok3">상록원 3층</string>
+    <string name="restaurant_hangangro">한강로 부엌</string>
+    <string name="cafe_paul">폴 바셋</string>
+    <string name="cafe_stump">그루터기</string>
+    <string name="cafe_blue">블루팟</string>
+    <string name="restaurant_dongas">돈가스</string>
+    <string name="menu_add">추가</string>
+    <string name="menu_save">저장</string>
+    <string name="tenThousand">+ 1만원</string>
+    <string name="thousand">+ 1천원</string>
+    <string name="hundred">+ 1백원</string>
+    <string name="complete">입력 완료하기</string>
+    <string name="input_check">입력한 정보 확인</string>
+    <string name="mtenThousand">- 1만원</string>
+    <string name="mthousand">- 1천원</string>
+    <string name="mhundred">- 1백원</string>
+    <string name="save">저장하기</string>
+</resources>

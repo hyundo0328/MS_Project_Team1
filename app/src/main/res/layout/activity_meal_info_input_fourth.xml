@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MealInfoInputFourth">
+
+    <Button
+        android:id="@+id/prev3"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="95dp"
+        android:layout_marginBottom="60dp"
+        android:text="&lt;"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:cornerRadius="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/next5"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="95dp"
+        android:layout_marginBottom="60dp"
+        android:text="&gt;"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:cornerRadius="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/pageText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="78dp"
+        android:text="4 / 6"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/next5"
+        app:layout_constraintStart_toEndOf="@+id/prev3" />
+
+    <TextView
+        android:id="@+id/mainText4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:text="음식 만족도는?"
+        android:textAlignment="center"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/pointText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pointImage" />
+
+    <ImageView
+        android:id="@+id/pointImage"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:orientation="horizontal"
+        android:padding="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mainText4">
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="3dp">
+
+            <Button
+                android:id="@+id/point1"
+                android:layout_width="72dp"
+                android:layout_height="65dp"
+                android:text="1점"
+                app:cornerRadius="8dp" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="3dp"
+            android:paddingLeft="2dp">
+
+            <Button
+                android:id="@+id/point2"
+                android:layout_width="72dp"
+                android:layout_height="65dp"
+                android:text="2점"
+                app:cornerRadius="8dp" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="3dp"
+            android:paddingLeft="2dp">
+
+            <Button
+                android:id="@+id/point3"
+                android:layout_width="72dp"
+                android:layout_height="65dp"
+                android:text="3점"
+                app:cornerRadius="8dp" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="3dp"
+            android:paddingLeft="2dp">
+
+            <Button
+                android:id="@+id/point4"
+                android:layout_width="72dp"
+                android:layout_height="65dp"
+                android:text="4점"
+                app:cornerRadius="8dp" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="3dp"
+            android:paddingLeft="2dp">
+
+            <Button
+                android:id="@+id/point5"
+                android:layout_width="72dp"
+                android:layout_height="65dp"
+                android:text="5점"
+                app:cornerRadius="8dp" />
+        </FrameLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
