@@ -83,7 +83,7 @@ public class MealAnalysis extends AppCompatActivity {
                     } else {
                         // 식사 시간 아침, 점심, 저녁 구분
                         try {
-                            String timeString = "12:00";
+                            String timeString = start;
 
                             // SimpleDateFormat을 사용하여 문자열을 Date 객체로 파싱
                             SimpleDateFormat sdf = new SimpleDateFormat("HH:mm");
